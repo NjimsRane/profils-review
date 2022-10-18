@@ -1,0 +1,157 @@
+*,*::before,*::after{
+    box-sizing:inherit;
+    padding: 0;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+html{
+    font-size:62.5%;
+    box-sizing:border-box;
+}
+$bg-color:#dde1e7;
+$primary-color:#20DBC2;
+$secondary-color:#F15025;
+$fnt-color:#1a2d3e;
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    main{
+        .container{
+            width:100%;
+            text-align:center;
+            padding-inline:1em;
+            
+            
+            h1{
+                font-size:3rem;
+                color:$fnt-color;
+                margin-bottom:2em;
+
+                position:relative;
+
+                &::after{
+                    content: "";
+                    position:absolute;
+                    width:20%;
+                    height:0.15em;
+                    
+                    background-color:$primary-color;
+                    left:40%;
+                    top:120%;
+                }
+             }
+            .box{
+                width:100%;
+                max-width:40em;
+                
+                box-shadow:0 5px 10px 0 rgba(0,0,0,0.3);
+                border-radius:5px;
+                padding:2em 1em;
+
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+
+                transition: all 1s;
+
+                .picture{
+                    width:10em;
+                    height:10em;
+                    border-radius:100%;
+
+                    position: relative;
+                    background-color:$primary-color;
+
+                    img{
+                        position:absolute;
+                        
+                        width:100%;
+                        height:100%;
+                        border-radius:100%;
+                        object-fit:cover;
+                        
+                        right:4%;
+                        top:2%;
+                    }
+
+                    .quote-sign{
+                        background-color:$primary-color;
+                        position: relative;
+                        color:$bg-color;
+                        height:2.5em;
+                        width:2.5em;
+                        
+                        border-radius:100%;
+                        
+                        span{
+                        position:absolute;
+                        bottom:20%;
+                        right:30%;
+                        
+                        font-size:2.5rem;
+                        font-weight:900;
+                        font-style:oblique;
+                       }
+                    }
+                }
+                .profil-info{
+                    margin-block:1.5em 1em;
+
+                    .profil-name{
+                        color:$fnt-color;
+                        font-size:1.8rem;
+                    }
+                    .profil-title{
+                        color:$primary-color;
+                        font-size:2rem;
+                    }
+                }
+                .info{
+                    p{
+                        // text-align:justify;
+                        text-indent:20px;
+                        line-height:1.5;
+                        font-size:1.3rem;
+                    }
+                }
+                .slider{
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                    gap:2em;
+                    button{
+                        font-size:4em;
+                        color:$primary-color;
+                        cursor: pointer;
+                        background:none;
+                        border:none;
+                        
+                    }
+                }
+                .random-review{
+                    button{
+                        border:1px solid $primary-color;
+                        padding:0.3em 0.5em;
+                        font-size:1.5rem;
+                        border-radius:8px;
+                        cursor: pointer;
+                        background-color:none;
+                        outline: none;
+                        transition:all 0.5s;
+
+                        &:hover{
+                            background-color:$primary-color;
+                        }
+                    }
+                }
+            
+            }
+        }
+    }
+}
